@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-export const API_Instance = axios.create();
+export const AuthApiInstance = axios.create();
 
 enum TokenKeys{
   REFRESH_TOKEN = 'REFRESH_TOKEN',
@@ -8,7 +7,7 @@ enum TokenKeys{
 }
 
 //Append Access Token
-API_Instance.interceptors.request.use(
+AuthApiInstance.interceptors.request.use(
   async config => {
     const token = localStorage.getItem(TokenKeys.TOKEN)
     config.headers = { 
@@ -23,7 +22,7 @@ API_Instance.interceptors.request.use(
 });
 
 //Handler Refresh Token
-API_Instance.interceptors.response.use((response) => {
+AuthApiInstance.interceptors.response.use((response) => {
   return response
 }, async function (error) {
   const originalRequest = error.config;
@@ -31,7 +30,7 @@ API_Instance.interceptors.response.use((response) => {
     originalRequest._retry = true;
     const access_token = localStorage.getItem(TokenKeys.REFRESH_TOKEN);            
     axios.defaults.headers.common['Authorization'] = 'Bearer ' + access_token;
-    return API_Instance(originalRequest);
+    return AuthApiInstance(originalRequest);
   }
   return Promise.reject(error);
 });

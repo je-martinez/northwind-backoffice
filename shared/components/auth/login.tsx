@@ -18,7 +18,7 @@ const Login = () => {
         </div>
         <div className="text-right mt-2 cursor-pointer">
             <Link href="forgot-password">
-                <a className="mt-2 block text-blue-400 text-right hover:text-blue-700 font-semibold">Forgot Password?</a>
+                <a href="forgot-password" className="mt-2 block text-blue-400 text-right hover:text-blue-700 font-semibold">Forgot Password?</a>
             </Link>
         </div>
         <button type="submit" className="w-full block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg
@@ -45,7 +45,7 @@ const Login = () => {
             Google</span>
         </div>
         </button> */}
-        <p className="mt-8">Need an account? <Link href="register">
+        <p className="mt-8">Need an account? <Link href="sign-up">
             <a className="text-blue-500 hover:text-blue-700 font-semibold cursor-pointer">Create an
             account</a>
         </Link> 

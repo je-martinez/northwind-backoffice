@@ -19,7 +19,8 @@
       "@pages/*":["pages/*"],
       "@public/*":["public/*"],
       "@layout/*":["layout/*"],
-      "@shared/*":["shared/*"]
+      "@shared/*":["shared/*"],
+      "@api/*":["api/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

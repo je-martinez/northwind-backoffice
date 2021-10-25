@@ -1,6 +1,6 @@
 import React from "react";
 import { GeneralUtils } from "@shared/utils/general.utils";
-import { PropsLoginPage } from "@shared/constants/auth.props.constants";
+import Link from 'next/link';
 
 const Register = () => {
 
@@ -35,17 +35,22 @@ const Register = () => {
                     <input type="text" name="last_name" id="last_name" placeholder="Enter Last Name" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autoFocus autoComplete="off" required />
                 </div>
             </div>
-            <div className="mt-4">
+            <div className="mt-2">
                 <label className="block text-gray-700">Email Address</label>
                 <input type="email" name="email_address" id="email_address" placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autoFocus autoComplete="off" required />
             </div>
-            <div>
-                <label className="block text-gray-700">Phone</label>
+            <div className="mt-2">
+                <label className="block text-gray-700 mt-2">Phone</label>
                 <input type="phone" name="phone" id="phone" placeholder="Enter Phone" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autoFocus autoComplete="off" required />
             </div>
-            <div>
+            <div className="mt-2">
                 <label className="block text-gray-700">Password</label>
                 <input type="password" name="password" id="password" placeholder="EnterPassword" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autoFocus autoComplete="off" required />
+            </div>
+            <div>
+                <Link href="login">
+                    <a className="mt-2 block text-blue-400 text-right hover:text-blue-700 font-semibold">I'm already have an account</a>
+                </Link>
             </div>
             <button onClick={submitForm} type="submit" className="w-full block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg
                 px-4 py-3 mt-6">Register</button>

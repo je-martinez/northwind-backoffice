@@ -9,16 +9,16 @@ const Login = () => {
         <form className="mt-6" action="#" method="POST">
         <div>
             <label className="block text-gray-700">Email Address</label>
-            <input type="email" name="" id="" placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autoFocus autoComplete="off" required />
+            <input type="email" id="input_email" placeholder="Enter Email Address" className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autoFocus autoComplete="off" required />
         </div>
         <div className="mt-4">
             <label className="block text-gray-700">Password</label>
-            <input type="password" name="" id="" placeholder="Enter Password" minLength={6} className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+            <input type="password" id="input_password" placeholder="Enter Password" minLength={6} className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                 focus:bg-white focus:outline-none" required />
         </div>
         <div className="text-right mt-2 cursor-pointer">
-            <Link href="/forgot-password">
-                <a className="text-sm font-semibold text-gray-700 hover:text-blue-700 focus:text-blue-700">Forgot Password?</a>
+            <Link href="forgot-password">
+                <a className="mt-2 block text-blue-400 text-right hover:text-blue-700 font-semibold">Forgot Password?</a>
             </Link>
         </div>
         <button type="submit" className="w-full block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg
@@ -45,7 +45,7 @@ const Login = () => {
             Google</span>
         </div>
         </button> */}
-        <p className="mt-8">Need an account? <Link href="/register">
+        <p className="mt-8">Need an account? <Link href="register">
             <a className="text-blue-500 hover:text-blue-700 font-semibold cursor-pointer">Create an
             account</a>
         </Link> 

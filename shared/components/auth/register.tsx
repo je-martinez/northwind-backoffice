@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from '@hookform/resolvers/yup';
-import { IRegister } from "@pages/sign-up/models/register.models";
+import { IRegister } from "models/register.models";
 import { POST_REGISTER } from "@api/auth/register-api.instance";
 
 
@@ -19,6 +19,13 @@ const Register = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm<IRegister>({
         // resolver: yupResolver(schema)
+        defaultValues:{
+            FirstName: 'Jose',
+            LastName: 'Martinez',
+            Email: 'jose.martinez@cit.hn',
+            Phone: '+50495554527',
+            Password: 'Cit.123'
+        }
     });
 
     const onSubmit = async (data: IRegister) => {

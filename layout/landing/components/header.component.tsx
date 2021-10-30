@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import { Fragment } from 'react'
 import Link from 'next/link';
+import Image from  'next/image';
 
 import {
   BookmarkAltIcon,
@@ -91,11 +92,11 @@ const Header: NextPage = () => {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">Workflow</span>
-              <img
+              {/* <Image
                 className="h-8 w-auto sm:h-10"
                 src={Enum_AssetsImg.LOGO}
                 alt=""
-              />
+              /> */}
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -280,7 +281,7 @@ const Header: NextPage = () => {
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
-                  <img
+                  <Image
                     className="h-8 w-auto"
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                     alt="Workflow"

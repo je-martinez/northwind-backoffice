@@ -31,7 +31,7 @@ app.interceptors.response.use(
 export const POST_REGISTER = async (data:IRegister) => {
   // try{
     const body = toJsonCase(data);
-    const response = app.post(`signup`, body, {
+    const response = app.post(`auth/signup`, body, {
       headers: {
         'Content-Type': 'application/json',
       }
